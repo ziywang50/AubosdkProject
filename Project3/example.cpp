@@ -795,7 +795,7 @@ aubo_robot_namespace::Pos convertcoordinates(RSHD rshd, std::vector<Output> resu
 	std::cout << mat2(2);
 	//zc is the z value of the robot's end effector on camera coordinate system.
 	//double zc = (zw + mat2(2)) / mat1(2);
-	double zc = 0.35;
+	double zc = 0.5;
 	arma::vec world = zc * mat1 - mat2;
 	aubo_robot_namespace::Pos pos1 = { world(0), world(1), world(2) };
 	return pos1;
